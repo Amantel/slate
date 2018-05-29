@@ -32,7 +32,7 @@ This example API documentation page was created with [Slate](https://github.com/
 curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
 ```
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `meowmeowmeow!` with your API key.
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
