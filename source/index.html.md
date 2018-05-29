@@ -127,28 +127,13 @@ type | string | music/sport/other
 otherType | string | for "other" types of events. Can be: comedy,musicals/clubbing/dance/classical/other
 **classification** | object | >>>
 image | string | url to event image. should be https
-**score** | object | TODO >>>
+**score** | object | >>>
 city | string | event city (as in event)
 country | string | event country (as in event of based on country code)
 countryCode | string | event country code (as in event of based on country)
 **performers** | array of objects | >>>
----|---|---
->name | string | performer name (as in event). can be artist, sport team or anything else
->sourceImage | string | url to event image. should be https
->artistID | ObjectId | ID of event in artists collection
----|---|---
 **venue** | object | >>>
----|---|---
->name | string | performer name (as in event)
->address | string | venue address (as in event)
->*sourceInfo* | object | all venue info from event (if present)
->venueID | ObjectId | ID of event in venues collection
----|---|---
 **location** | object | >>>
----|---|---
->type | string | always "Point" for mongo reasons
->coordinates | array | first longitude (-180 to 180), than latitude (-90 to 90)
----|---|---
 wanderCityID | string | encoded city id from cities collections 
 startDate | string | UTC date+time (optional)
 startTime | string | local time 
@@ -156,28 +141,13 @@ localTimezoneOffset | integer | time offset of event location in minutes
 serverTimezoneOffset | integer | time offset of server in minutes
 endDate | string | end date
 endTime | string | end time 
-**description** | object | can have properties: html and/or txt >>>
----|---|---
->html | string | html description from event
->txt | string | txt description from event
----|---|---
+**description** | object | >>>
 URL | string | link to event 
 currency | string | currency (usually 3 letters) 
 maxPrice | string | maximum price of the event
 startTime | string | minumim price of the event
 eventStatus | string | status of the event, can be "on sale" or "cancelled"
 **sync** | object | object with flags (we tryed to sync and had some non error result) >>>
----|---|---
->citySynced | boolean | is city synced 
->artistsSynced | boolean | is artist synced
->venueSynced | boolean | is venue synced
->*locationInfo* | object | info how we had found location  >>>
-*---*|*---*|*---*
->>source | string | event/venue/city
->>precision | string | exact/city - if we have city precision it can be upgrade with additional searches
-*---*|*---*|*---*
->cityHasNoCoordinates | boolean | true if we have found the city in our cities collection, but there were no coordinates there
----|---|---
 
 
 **classification object**
@@ -193,6 +163,69 @@ tags | array | tags based on event info like 'Festival'
 Parameter | Type | Description and/or examples
 --------- | ------- | -----------
 isScored | boolean | is this event scored by us
+
+
+
+**performer object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+name | string | performer name (as in event). can be artist, sport team or anything else
+sourceImage | string | url to event image. should be https
+artistID | ObjectId | ID of event in artists collection
+
+
+**venue object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+name | string | performer name (as in event)
+address | string | venue address (as in event)
+**sourceInfo** | object | all venue info from event (if present)
+venueID | ObjectId | ID of event in venues collection
+
+**location object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+type | string | always "Point" for mongo reasons
+coordinates | array | first longitude (-180 to 180), than latitude (-90 to 90)
+
+
+**performer object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+name | string | performer name (as in event). can be artist, sport team or anything else
+sourceImage | string | url to event image. should be https
+artistID | ObjectId | ID of event in artists collection
+
+
+**description object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+html | string | html description from event
+txt | string | txt description from event
+
+**sync object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+citySynced | boolean | is city synced 
+artistsSynced | boolean | is artist synced
+venueSynced | boolean | is venue synced
+**locationInfo** | object | info how we had found location  >>>
+cityHasNoCoordinates | boolean | true if we have found the city in our cities collection, but there were no coordinates there
+
+
+**locationInfo object**
+
+Parameter | Type | Description and/or examples
+--------- | ------- | -----------
+source | string | event/venue/city
+precision | string | exact/city - if we have city precision it can be upgrade with additional searches
+
 
 <aside class="warning">
 Work in progress
