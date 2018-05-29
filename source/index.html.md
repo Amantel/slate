@@ -125,9 +125,9 @@ sourceType | string | primary, secondary
 title | string | event title
 type | string | music/sport/other
 otherType | string | for "other" types of events. Can be: comedy,musicals/clubbing/dance/classical/other
-classification | object | **>>>**
+**classification** | object | >>>
 image | string | url to event image. should be https
-**score** | object | TODO **>>>**
+**score** | object | TODO >>>
 city | string | event city (as in event)
 country | string | event country (as in event of based on country code)
 countryCode | string | event country code (as in event of based on country)
@@ -181,6 +181,7 @@ eventStatus | string | status of the event, can be "on sale" or "cancelled"
 
 
 **classification object**
+
 Parameter | Type | Description and/or examples
 --------- | ------- | -----------
 subTypes | array | subtypes based on event info like 'Opera'
@@ -188,6 +189,7 @@ genres | array | genres based on event info like 'Rock'
 tags | array | tags based on event info like 'Festival'
 
 **score object**
+
 Parameter | Type | Description and/or examples
 --------- | ------- | -----------
 isScored | boolean | is this event scored by us
