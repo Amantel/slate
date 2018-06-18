@@ -3,9 +3,6 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -20,8 +17,6 @@ search: true
 # Introduction
 
 Welcome to the Wanderlust API! You can use our API to access Wanderlust API endpoints, which can get information on events and locations.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Events
 
@@ -120,7 +115,7 @@ Parameter | Type | Description and/or examples
 --------- | ------- | -----------
 _id | ObjectId | ID of event in events collection
 rawID | string | Internal ID in the event source
-source | string | event source name 
+source | string | event source name
 sourceType | string | primary, secondary
 title | string | event title
 type | string | music/sport/other
@@ -134,16 +129,16 @@ countryCode | string | event country code (as in event of based on country)
 **performers** | array of objects | >>>
 **venue** | object | >>>
 **location** | object | >>>
-wanderCityID | string | encoded city id from cities collections 
+wanderCityID | string | encoded city id from cities collections
 startDate | string | UTC date+time (optional)
-startTime | string | local time 
+startTime | string | local time
 localTimezoneOffset | integer | time offset of event location in minutes
 serverTimezoneOffset | integer | time offset of server in minutes
 endDate | string | end date
-endTime | string | end time 
+endTime | string | end time
 **description** | object | >>>
-URL | string | link to event 
-currency | string | currency (usually 3 letters) 
+URL | string | link to event
+currency | string | currency (usually 3 letters)
 maxPrice | string | maximum price of the event
 startTime | string | minumim price of the event
 eventStatus | string | status of the event, can be "on sale" or "cancelled"
@@ -212,7 +207,7 @@ txt | string | txt description from event
 
 Parameter | Type | Description and/or examples
 --------- | ------- | -----------
-citySynced | boolean | is city synced 
+citySynced | boolean | is city synced
 artistsSynced | boolean | is artist synced
 venueSynced | boolean | is venue synced
 **locationInfo** | object | info how we had found location  >>>
@@ -230,3 +225,5 @@ precision | string | exact/city - if we have city precision it can be upgrade wi
 <aside class="warning">
 Work in progress
 </aside>
+
+#PARTNERS
